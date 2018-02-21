@@ -119,6 +119,7 @@
     <Compile Include="FormTag.Designer.cs">
       <DependentUpon>FormTag.cs</DependentUpon>
     </Compile>
+    <Compile Include="Funkcije\Functions.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameInfo.cs">
       <SubType>Form</SubType>

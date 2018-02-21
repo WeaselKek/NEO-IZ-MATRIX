@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using VideoGamesNeo.Funkcije;
 
 namespace VideoGamesNeo
 {
@@ -79,6 +80,9 @@ namespace VideoGamesNeo
 
         private void btnShow_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgv1))
+                return;
+
             GameInfo agf = new GameInfo();
             Game gm = dgv1.CurrentRow.DataBoundItem as Game;
             agf.client = client;
@@ -111,6 +115,9 @@ namespace VideoGamesNeo
 
         private void btnDelGame_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgv1))
+                return;
+
             Game gm = dgv1.CurrentRow.DataBoundItem as Game;
 
             String qs = "MATCH (b:Game) WHERE b.name = '" + gm.name + "' detach delete b";

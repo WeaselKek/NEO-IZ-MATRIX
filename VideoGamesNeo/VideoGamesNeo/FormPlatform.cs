@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using VideoGamesNeo.Funkcije;
 
 namespace VideoGamesNeo
 {
@@ -19,6 +20,9 @@ namespace VideoGamesNeo
 
         private void btnTrue_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgvPlatform))
+                return;
+
             Platform c = dgvPlatform.CurrentRow.DataBoundItem as Platform;
 
             String qs = "MATCH (a:Game),(b:Platform) WHERE a.name = '" + G.name + "' AND b.name = '" + c.name + "'" +
@@ -56,6 +60,9 @@ namespace VideoGamesNeo
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgvPlatform))
+                return;
+
             AddPlatform agf = new AddPlatform();
             agf.client = client;
             agf.P = dgvPlatform.CurrentRow.DataBoundItem as Platform;
@@ -65,6 +72,9 @@ namespace VideoGamesNeo
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgvPlatform))
+                return;
+
             Platform g = dgvPlatform.CurrentRow.DataBoundItem as Platform;
             String qs = "MATCH (b:Platform) WHERE b.name = '" + g.name + "' detach delete b";
             var query = new Neo4jClient.Cypher.CypherQuery(qs, new Dictionary<string, object>(), CypherResultMode.Set);

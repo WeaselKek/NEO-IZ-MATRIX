@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using VideoGamesNeo.Funkcije;
 
 namespace VideoGamesNeo
 {
@@ -43,6 +44,9 @@ namespace VideoGamesNeo
 
         private void btnTrue_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgvCompany))
+                return;
+
             String tip = "PUBLISHED";
             if (rdbDev.Checked)
                 tip = "DEVELOPED";
@@ -61,6 +65,9 @@ namespace VideoGamesNeo
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgvCompany))
+                return;
+
             AddCompany agf = new AddCompany();
             agf.client = client;
             agf.C = dgvCompany.CurrentRow.DataBoundItem as Company;
@@ -70,6 +77,9 @@ namespace VideoGamesNeo
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgvCompany))
+                return;
+
             Company g = dgvCompany.CurrentRow.DataBoundItem as Company;
             String qs = "MATCH (b:Company) WHERE b.name = '" + g.name +"' detach delete b";
             var query = new Neo4jClient.Cypher.CypherQuery(qs, new Dictionary<string, object>(), CypherResultMode.Set);

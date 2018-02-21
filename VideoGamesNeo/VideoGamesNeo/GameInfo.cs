@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using VideoGamesNeo.Funkcije;
 
 namespace VideoGamesNeo
 {
@@ -143,6 +144,9 @@ namespace VideoGamesNeo
 
         private void btnRemoveComp_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgvCompany))
+                return;
+
             Company c = dgvCompany.CurrentRow.DataBoundItem as Company;
 
             String tip = "PUBLISHED";
@@ -169,6 +173,9 @@ namespace VideoGamesNeo
 
         private void btnRemoveTag_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgvTag))
+                return;
+
             Tag c = dgvTag.CurrentRow.DataBoundItem as Tag;
 
             String qs = "MATCH (a:Game),(b:Tag),(b)-[r:DESCRIBES]->(a) WHERE a.name = '" + G.name + "' AND b.name = '" + c.name + "'" +
@@ -191,6 +198,9 @@ namespace VideoGamesNeo
 
         private void btnRemovePlatform_Click(object sender, EventArgs e)
         {
+            if (!Functions.chkIfSelected(dgvPlatform))
+                return;
+
             Platform c = dgvPlatform.CurrentRow.DataBoundItem as Platform;
 
             String qs = "MATCH (a:Game),(b:Platform),(b)-[r:SUPPORTS]->(a) WHERE a.name = '" + G.name + "' AND b.name = '" + c.name + "'" +
