@@ -44,6 +44,7 @@
             this.dgvTag.AllowUserToResizeColumns = false;
             this.dgvTag.AllowUserToResizeRows = false;
             this.dgvTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTag.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvTag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTag.Location = new System.Drawing.Point(32, 13);
             this.dgvTag.Margin = new System.Windows.Forms.Padding(4);

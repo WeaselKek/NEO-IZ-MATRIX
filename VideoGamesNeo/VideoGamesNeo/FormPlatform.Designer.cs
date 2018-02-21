@@ -44,6 +44,7 @@
             this.dgvPlatform.AllowUserToResizeColumns = false;
             this.dgvPlatform.AllowUserToResizeRows = false;
             this.dgvPlatform.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPlatform.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvPlatform.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlatform.Location = new System.Drawing.Point(52, 25);
             this.dgvPlatform.Margin = new System.Windows.Forms.Padding(4);

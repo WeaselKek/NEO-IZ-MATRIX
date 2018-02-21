@@ -58,6 +58,7 @@
             this.dgvCompany.AllowUserToAddRows = false;
             this.dgvCompany.AllowUserToDeleteRows = false;
             this.dgvCompany.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCompany.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCompany.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompany.ColumnHeadersVisible = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

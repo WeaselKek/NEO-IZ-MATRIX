@@ -101,6 +101,7 @@
             this.dgvCompany.AllowUserToResizeColumns = false;
             this.dgvCompany.AllowUserToResizeRows = false;
             this.dgvCompany.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCompany.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCompany.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompany.Location = new System.Drawing.Point(16, 405);
             this.dgvCompany.MultiSelect = false;
@@ -118,6 +119,7 @@
             this.dgvTag.AllowUserToResizeColumns = false;
             this.dgvTag.AllowUserToResizeRows = false;
             this.dgvTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTag.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvTag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTag.ColumnHeadersVisible = false;
             this.dgvTag.Location = new System.Drawing.Point(619, 46);
@@ -137,6 +139,7 @@
             this.dgvPlatform.AllowUserToResizeColumns = false;
             this.dgvPlatform.AllowUserToResizeRows = false;
             this.dgvPlatform.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPlatform.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvPlatform.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlatform.ColumnHeadersVisible = false;
             this.dgvPlatform.Location = new System.Drawing.Point(619, 288);
