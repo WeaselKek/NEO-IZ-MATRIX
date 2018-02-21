@@ -19,8 +19,7 @@ namespace VideoGamesNeo
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            //client = new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "neoneo");
-            client = new GraphClient(new Uri("http://217.16.142.190:7474/db/data"), "neo4j", "neoneo");
+            client = new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "neoneo");          
             try
             {
                 client.Connect();
@@ -75,7 +74,7 @@ namespace VideoGamesNeo
             dgv1.DataSource = games;
             dgv1.Columns["rat"].Visible = false;
             dgv1.Columns["name"].HeaderText = "Name";
-            dgv1.Columns["reldate"].HeaderText = "Release Date"; ;
+            dgv1.Columns["reldate"].HeaderText = "Release Date";
         }
 
         private void btnShow_Click(object sender, EventArgs e)
@@ -104,6 +103,7 @@ namespace VideoGamesNeo
             AddCompany agf = new AddCompany();
             agf.client = client;
             agf.ShowDialog();
+            LoadComboBoxes();
         }
 
         private void tsmEditCompany_Click(object sender, EventArgs e)
@@ -111,6 +111,7 @@ namespace VideoGamesNeo
             FormCompany agf = new FormCompany();
             agf.client = client;
             agf.ShowDialog();
+            LoadComboBoxes();
         }
 
         private void btnDelGame_Click(object sender, EventArgs e)
@@ -133,6 +134,7 @@ namespace VideoGamesNeo
             AddPlatform agf = new AddPlatform();
             agf.client = client;
             agf.ShowDialog();
+            LoadComboBoxes();
         }
 
         private void tsmEditPlatform_Click(object sender, EventArgs e)
@@ -140,6 +142,7 @@ namespace VideoGamesNeo
             FormPlatform agf = new FormPlatform();
             agf.client = client;
             agf.ShowDialog();
+            LoadComboBoxes();
         }
 
         private void tsmAddTag_Click(object sender, EventArgs e)
@@ -147,6 +150,7 @@ namespace VideoGamesNeo
             AddTag agf = new AddTag();
             agf.client = client;
             agf.ShowDialog();
+            LoadComboBoxes();
         }
 
         private void tsmEditTag_Click(object sender, EventArgs e)
@@ -154,6 +158,7 @@ namespace VideoGamesNeo
             FormTag agf = new FormTag();
             agf.client = client;
             agf.ShowDialog();
+            LoadComboBoxes();
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
