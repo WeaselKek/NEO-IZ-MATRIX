@@ -1,0 +1,539 @@
+//ocene
+
+CREATE (oc1:Rating {value:1, desc:'Appalling'})
+CREATE (oc2:Rating {value:2, desc:'Horrible'})
+CREATE (oc3:Rating {value:3, desc:'Very Bad'})
+CREATE (oc4:Rating {value:4, desc:'Bad'})
+CREATE (oc5:Rating {value:5, desc:'Average'})
+CREATE (oc6:Rating {value:6, desc:'Fine'})
+CREATE (oc7:Rating {value:7, desc:'Good'})
+CREATE (oc8:Rating {value:8, desc:'Very Good'})
+CREATE (oc9:Rating {value:9, desc:'Great'})
+CREATE (oc10:Rating {value:10, desc:'Masterpiece'})
+
+//igre
+
+CREATE (alanwake:Game {name:'Alan Wake', reldate:'16/02/2012'}) 
+CREATE (alien:Game {name:'Alien: Isolation', reldate:'06/10/2014'}) 
+CREATE (aoe2:Game {name:'Age of Empires II', reldate:'30/09/1999'}) 
+CREATE (aoe3:Game {name:'Age of Empires III', reldate:'18/10/2005'}) 
+CREATE (bg:Game {name:'Baldurs Gate', reldate:'21/12/1998'}) 
+CREATE (bio1:Game {name:'Bioshock', reldate:'21/08/2007'}) 
+CREATE (bord1:Game {name:'Borderlands', reldate:'26/10/2009'})
+CREATE (bord2:Game {name:'Borderlands 2', reldate:'18/09/2012'}) 
+CREATE (cod2:Game {name:'Call of Duty 2', reldate:'25/10/2005'}) 
+CREATE (cod4:Game {name:'Call of Duty 4: Modern Warfare', reldate:'09/11/2007'}) 
+CREATE (csgo:Game {name:'Counter-Strike: Global Offensive', reldate:'21/08/2012'}) 
+CREATE (cry:Game {name:'Crysis', reldate:'16/11/2007'})
+CREATE (dmc3:Game {name:'Devil May Cry 3', reldate:'17/02/2005'}) 
+CREATE (diablo:Game {name:'Diablo', reldate:'02/11/1997'}) 
+CREATE (doom16:Game {name:'Doom(2016)', reldate:'13/05/2016'}) 
+CREATE (fc1:Game {name:'Far Cry', reldate:'26/03/2004'}) 
+CREATE (gtavc:Game {name:'Grand Theft Auto: Vice City', reldate:'12/05/2003'}) 
+CREATE (gtasa:Game {name:'Grand Theft Auto: San Andreas', reldate:'10/06/2005'}) 
+CREATE (gtav:Game {name:'Grand Theft Auto V', reldate:'14/04/2015'})
+CREATE (goth1:Game {name:'Gothic', reldate:'23/11/2001'}) 
+CREATE (hl1:Game {name:'Half-Life', reldate:'27/11/1998'}) 
+CREATE (hl2:Game {name:'Half-Life 2', reldate:'16/11/2004'}) 
+CREATE (hm1:Game {name:'Hotline Miami', reldate:'23/10/2012'}) 
+CREATE (hm2:Game {name:'Hotline Miami 2: Wrong Number', reldate:'10/03/2015'}) 
+CREATE (jc2:Game {name:'Just Cause 2', reldate:'26/03/2010'}) 
+CREATE (kf1:Game {name:'Killing Floor', reldate:'14/05/2009'}) 
+CREATE (kf2:Game {name:'Killing Floor 2', reldate:'18/11/2016'}) 
+CREATE (l4d2:Game {name:'Left 4 Dead 2', reldate:'17/11/2009'}) 
+CREATE (mass1:Game {name:'Mass Effect', reldate:'20/11/2007'}) 
+CREATE (mine:Game {name:'Minecraft', reldate:'18/11/2011'}) 
+CREATE (mkx:Game {name:'Mortal Kombat X', reldate:'13/04/2015'}) 
+CREATE (nfsu:Game {name:'Need for Speed: Underground', reldate:'28/11/2003'})
+CREATE (nfs15:Game {name:'Need for Speed(2015)', reldate:'05/11/2015'})
+CREATE (ow:Game {name:'Overwatch', reldate:'24/05/2016'}) 
+CREATE (pd1:Game {name:'Payday:The Heist', reldate:'20/10/2011'}) 
+CREATE (pd2:Game {name:'Payday 2', reldate:'13/08/2013'}) 
+CREATE (port1:Game {name:'Portal', reldate:'10/10/2007'}) 
+CREATE (q2:Game {name:'Quake 2', reldate:'09/12/1997'}) 
+CREATE (ron:Game {name:'Rise of Nations', reldate:'23/05/2003'})
+CREATE (rtw:Game {name:'Rome: Total War', reldate:'01/10/2004'}) 
+CREATE (ss1:Game {name:'Serious Sam: The First Encounter', reldate:'21/03/2001'}) 
+CREATE (ss2:Game {name:'Serious Sam: The Second Encounter', reldate:'02/02/2002'})
+CREATE (tesv:Game {name:'The Elder Scrolls V: Skyrim', reldate:'11/11/2011'})
+CREATE (tr1:Game {name:'Tomb Raider', reldate:'25/10/2006'}) 
+CREATE (wolf3d:Game {name:'Wolfenstein 3D', reldate:'05/05/1992'}) 
+CREATE (wc3:Game {name:'Warcraft III: Reign of Chaos', reldate:'05/07/2002'})
+CREATE (witch1:Game {name:'Witcher', reldate:'26/10/2007'}) 
+CREATE (zc1:Game {name:'Zeno Clash', reldate:'21/04/2009'}) 
+
+//platforme
+
+CREATE (ps2:Platform {name:'PlayStation 2', type:'console'})
+CREATE (xbox:Platform {name:'Xbox', type:'console'})
+CREATE (xbox360:Platform {name:'Xbox 360', type:'console'})
+CREATE (ps3:Platform {name:'PlayStation 3', type:'console'})
+CREATE (wii:Platform {name:'Wii', type:'console'})
+CREATE (ps4:Platform {name:'PlayStation 4', type:'console'})
+CREATE (xbox1:Platform {name:'Xbox One', type:'console'})
+CREATE (wiiu:Platform {name:'Wii U', type:'console'})
+CREATE (win:Platform {name:'Windows', type:'pc'})
+CREATE (mac:Platform {name:'Mac', type:'pc'})
+CREATE (lin:Platform {name:'Linux', type:'pc'})
+CREATE (psvita:Platform {name:'PlayStation Vita', type:'handheld'})
+CREATE (n3ds:Platform {name:'Nintendo 3DS', type:'handheld'})
+CREATE (nsw:Platform {name:'Nintendo Switch', type:'handheld'})
+
+//kompanije
+
+CREATE (remedy:Company {name:'Remedy Entertainment'})
+CREATE (cra:Company {name:'Creative Assembly'})
+CREATE (sega:Company {name:'Sega'})
+CREATE (ensemble:Company {name:'Ensemble Studios'})
+CREATE (microsoft:Company {name:'Microsoft'})
+CREATE (bioware:Company {name:'Bioware'})
+CREATE (inter:Company {name:'Interplay Entertainment'})
+CREATE (twok:Company {name:'2K Games'})
+CREATE (gbox:Company {name:'Gearbox Software'})
+CREATE (activision:Company {name:'Activision'})
+CREATE (iw:Company {name:'Infinity Ward'})
+CREATE (valve:Company {name:'Valve'})
+CREATE (ea:Company {name:'Electronic Arts'})
+CREATE (crytek:Company {name:'Crytek'})
+CREATE (capcom:Company {name:'Capcom'})
+CREATE (blizz:Company {name:'Blizzard'})
+CREATE (ids:Company {name:'id Software'})
+CREATE (bethesda:Company {name:'Bethesda Softworks'})
+CREATE (ubi:Company {name:'Ubisoft'})
+CREATE (rock:Company {name:'Rockstar Games'})
+CREATE (egmont:Company {name:'Egmont Interactive'})
+CREATE (piranha:Company {name:'Piranha Bytes'})
+CREATE (denna:Company {name:'Dennaton Games'})
+CREATE (devo:Company {name:'Devolver Digital'})
+CREATE (eidos:Company {name:'Eidos Interactive'})
+CREATE (aval:Company {name:'Avalanche Studios'})
+CREATE (trip:Company {name:'Tripwire Interactive'})
+CREATE (mojang:Company {name:'Mojang'})
+CREATE (nether:Company {name:'NetherRealm Studios'})
+CREATE (wb:Company {name:'Warner Bros'})
+CREATE (ghost:Company {name:'Ghost Games'})
+CREATE (ovk:Company {name:'Overkill Software'})
+CREATE (sony:Company {name:'Sony'}) 	
+CREATE (five:Company {name:'505 Games'})
+CREATE (gti:Company {name:'GT Interactive'})
+CREATE (bhg:Company {name:'Big Huge Games['})
+CREATE (tca:Company {name:'The Creative Assembly'})
+CREATE (croteam:Company {name:'Croteam'})
+CREATE (god:Company {name:'Gathering of Developers'})
+CREATE (cored:Company {name:'Core Design'})
+CREATE (apoge:Company {name:'Apogee Software'})
+CREATE (cdpr:Company {name:'CD Projekt Red'})
+CREATE (atari:Company {name:'Atari'})
+CREATE (firaxis:Company {name:'Firaxis Games'})
+CREATE (ace:Company {name:'ACE Team'})
+
+//tags
+
+CREATE (action:Tag {name:'Action'})
+CREATE (adven:Tag {name:'Adventure'})
+CREATE (strat:Tag {name:'Strategy'})
+CREATE (rpg:Tag {name:'RPG'})
+CREATE (sp:Tag {name:'Singleplayer'})
+CREATE (mp:Tag {name:'Multiplayer'})
+CREATE (race:Tag {name:'Racing'})
+CREATE (horror:Tag {name:'Horrror'})
+CREATE (diff:Tag {name:'Difficult'})
+CREATE (openw:Tag {name:'Open World'})
+CREATE (fantasy:Tag {name:'Fantasy'})
+CREATE (scifi:Tag {name:'Sci-Fi'})
+CREATE (coop:Tag {name:'Co-op'})
+CREATE (shooter:Tag {name:'Shooter'})
+CREATE (survival:Tag {name:'Survival'})
+CREATE (classic:Tag {name:'Classic'})
+CREATE (fps:Tag {name:'FPS'})
+CREATE (tps:Tag {name:'Third Person'})
+CREATE (isom:Tag {name:'Isometric'})
+
+//veze
+
+CREATE
+  (remedy)-[:DEVELOPED]->(alanwake),
+  (remedy)-[:PUBLISHED]->(alanwake),
+  (microsoft)-[:PUBLISHED]->(alanwake),  
+  (action)-[:DESCRIBES]->(alanwake),
+  (sp)-[:DESCRIBES]->(alanwake),
+  (win)-[:SUPPORTS]->(alanwake),
+  (xbox360)-[:SUPPORTS]->(alanwake),
+  (alanwake)-[:ISRATED{comment:'cool'}]->(oc7),
+  
+  (cra)-[:DEVELOPED]->(alien),
+  (sega)-[:PUBLISHED]->(alien),
+  (horror)-[:DESCRIBES]->(alien),
+  (win)-[:SUPPORTS]->(alien),
+  (ps4)-[:SUPPORTS]->(alien),
+  (alien)-[:ISRATED{comment:'cool'}]->(oc6),
+  
+  (ensemble)-[:DEVELOPED]->(aoe2),
+  (microsoft)-[:PUBLISHED]->(aoe2), 
+  (strat)-[:DESCRIBES]->(aoe2),
+  (classic)-[:DESCRIBES]->(aoe2),
+  (win)-[:SUPPORTS]->(aoe2),
+  (mac)-[:SUPPORTS]->(aoe2),
+  (aoe2)-[:ISRATED{comment:'cool'}]->(oc10),
+  
+  (ensemble)-[:DEVELOPED]->(aoe3),
+  (microsoft)-[:PUBLISHED]->(aoe3),
+  (strat)-[:DESCRIBES]->(aoe3),
+  (win)-[:SUPPORTS]->(aoe3),
+  (mac)-[:SUPPORTS]->(aoe3),
+  (aoe3)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (bioware)-[:DEVELOPED]->(bg),
+  (inter)-[:PUBLISHED]->(bg),  
+  (isom)-[:DESCRIBES]->(bg),
+  (sp)-[:DESCRIBES]->(bg),
+  (win)-[:SUPPORTS]->(bg),
+  (mac)-[:SUPPORTS]->(bg),
+  (bg)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (twok)-[:DEVELOPED]->(bio1),
+  (twok)-[:PUBLISHED]->(bio1),
+  (adven)-[:DESCRIBES]->(bio1),
+  (win)-[:SUPPORTS]->(bio1),
+  (xbox)-[:SUPPORTS]->(bio1),
+  (bio1)-[:ISRATED{comment:'cool'}]->(oc8),
+  
+  (gbox)-[:DEVELOPED]->(bord1),
+  (twok)-[:PUBLISHED]->(bord1), 
+  (rpg)-[:DESCRIBES]->(bord1),
+  (fps)-[:DESCRIBES]->(bord1),
+  (ps3)-[:SUPPORTS]->(bord1),
+  (xbox360)-[:SUPPORTS]->(bord1),
+  (bord1)-[:ISRATED{comment:'cool'}]->(oc10),
+  
+  (gbox)-[:DEVELOPED]->(bord2),
+  (twok)-[:PUBLISHED]->(bord2),
+  (fps)-[:DESCRIBES]->(bord2),
+  (win)-[:SUPPORTS]->(bord2),
+  (ps3)-[:SUPPORTS]->(bord2),
+  (bord2)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (iw)-[:DEVELOPED]->(cod2),
+  (activision)-[:PUBLISHED]->(cod2),  
+  (action)-[:DESCRIBES]->(cod2),
+  (fps)-[:DESCRIBES]->(cod2),
+  (win)-[:SUPPORTS]->(cod2),
+  (ps3)-[:SUPPORTS]->(cod2),
+  (cod2)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (iw)-[:DEVELOPED]->(cod4),
+  (activision)-[:PUBLISHED]->(cod4),
+  (fps)-[:DESCRIBES]->(cod4),
+  (win)-[:SUPPORTS]->(cod4),
+  (wii)-[:SUPPORTS]->(cod4),
+  (cod4)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (valve)-[:DEVELOPED]->(csgo),
+  (valve)-[:PUBLISHED]->(csgo),  
+  (mp)-[:DESCRIBES]->(csgo),
+  (shooter)-[:DESCRIBES]->(csgo),
+  (win)-[:SUPPORTS]->(csgo),
+  (lin)-[:SUPPORTS]->(csgo),
+  (csgo)-[:ISRATED{comment:'cool'}]->(oc7),
+  
+  (crytek)-[:DEVELOPED]->(cry),
+  (ea)-[:PUBLISHED]->(cry),
+  (sp)-[:DESCRIBES]->(cry),
+  (fps)-[:DESCRIBES]->(cry),
+  (win)-[:SUPPORTS]->(cry),
+  (ps3)-[:SUPPORTS]->(cry),
+  (cry)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (capcom)-[:DEVELOPED]->(dmc3),
+  (capcom)-[:PUBLISHED]->(dmc3),
+  (diff)-[:DESCRIBES]->(dmc3),
+  (ps2)-[:SUPPORTS]->(dmc3),
+  (xbox1)-[:SUPPORTS]->(dmc3),
+  (dmc3)-[:ISRATED{comment:'cool'}]->(oc8),
+  
+  (ids)-[:DEVELOPED]->(doom16),
+  (bethesda)-[:PUBLISHED]->(doom16),
+  (horror)-[:DESCRIBES]->(doom16),
+  (fantasy)-[:DESCRIBES]->(doom16),
+  (ps4)-[:SUPPORTS]->(doom16),
+  (xbox1)-[:SUPPORTS]->(doom16),
+  (doom16)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (crytek)-[:DEVELOPED]->(fc1),
+  (ubi)-[:PUBLISHED]->(fc1),
+  (shooter)-[:DESCRIBES]->(fc1),
+  (win)-[:SUPPORTS]->(fc1),
+  (ps4)-[:SUPPORTS]->(fc1),
+  (fc1)-[:ISRATED{comment:'cool'}]->(oc6),
+  
+  (rock)-[:DEVELOPED]->(gtavc),
+  (rock)-[:PUBLISHED]->(gtavc), 
+  (openw)-[:DESCRIBES]->(gtavc),
+  (action)-[:DESCRIBES]->(gtavc),
+  (ps2)-[:SUPPORTS]->(gtavc),
+  (win)-[:SUPPORTS]->(gtavc),
+  (gtavc)-[:ISRATED{comment:'cool'}]->(oc10),
+  
+  (rock)-[:DEVELOPED]->(gtasa),
+  (rock)-[:PUBLISHED]->(gtasa),
+  (openw)-[:DESCRIBES]->(gtasa),
+  (ps2)-[:SUPPORTS]->(gtasa),
+  (win)-[:SUPPORTS]->(gtasa),
+  (gtasa)-[:ISRATED{comment:'cool'}]->(oc8),
+  
+  (rock)-[:DEVELOPED]->(gtav),
+  (rock)-[:PUBLISHED]->(gtav),
+  (action)-[:DESCRIBES]->(gtav),
+  (openw)-[:DESCRIBES]->(gtav),
+  (xbox1)-[:SUPPORTS]->(gtav),
+  (win)-[:SUPPORTS]->(gtav),
+  (gtav)-[:ISRATED{comment:'cool'}]->(oc8),
+  
+  (piranha)-[:DEVELOPED]->(goth1),
+  (egmont)-[:PUBLISHED]->(goth1),
+  (rpg)-[:DESCRIBES]->(goth1),
+  (win)-[:SUPPORTS]->(goth1),
+  (goth1)-[:ISRATED{comment:'cool'}]->(oc5),
+  
+  (valve)-[:DEVELOPED]->(hl1),
+  (valve)-[:PUBLISHED]->(hl1),  
+  (fps)-[:DESCRIBES]->(hl1),
+  (diff)-[:DESCRIBES]->(hl1),
+  (lin)-[:SUPPORTS]->(hl1),
+  (win)-[:SUPPORTS]->(hl1),
+  (hl1)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (valve)-[:DEVELOPED]->(hl2),
+  (valve)-[:PUBLISHED]->(hl2),
+  (classic)-[:DESCRIBES]->(hl2),
+  (lin)-[:SUPPORTS]->(hl2),
+  (win)-[:SUPPORTS]->(hl2),
+  (hl2)-[:ISRATED{comment:'cool'}]->(oc4),
+  
+  (denna)-[:DEVELOPED]->(hm1),
+  (devo)-[:PUBLISHED]->(hm1), 
+  (isom)-[:DESCRIBES]->(hm1),
+  (diff)-[:DESCRIBES]->(hm1),
+  (mac)-[:SUPPORTS]->(hm1),
+  (win)-[:SUPPORTS]->(hm1),
+  (hm1)-[:ISRATED{comment:'cool'}]->(oc8),
+  
+  (denna)-[:DEVELOPED]->(hm2),
+  (devo)-[:PUBLISHED]->(hm2),
+  (diff)-[:DESCRIBES]->(hm2),
+  (xbox1)-[:SUPPORTS]->(hm2),
+  (win)-[:SUPPORTS]->(hm2),
+  (hm2)-[:ISRATED{comment:'cool'}]->(oc7),
+  
+  (aval)-[:DEVELOPED]->(jc2),
+  (eidos)-[:PUBLISHED]->(jc2),
+  (openw)-[:DESCRIBES]->(jc2),
+  (sp)-[:DESCRIBES]->(jc2),
+  (xbox360)-[:SUPPORTS]->(jc2),
+  (win)-[:SUPPORTS]->(jc2),
+  (jc2)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (trip)-[:DEVELOPED]->(kf1),
+  (trip)-[:PUBLISHED]->(kf1),
+  (coop)-[:DESCRIBES]->(kf1),
+  (xbox360)-[:SUPPORTS]->(kf1),
+  (ps3)-[:SUPPORTS]->(kf1),
+  (kf1)-[:ISRATED{comment:'cool'}]->(oc8),
+  
+  (trip)-[:DEVELOPED]->(kf2),
+  (trip)-[:PUBLISHED]->(kf2),  
+  (action)-[:DESCRIBES]->(kf2),
+  (coop)-[:DESCRIBES]->(kf2),
+  (ps4)-[:SUPPORTS]->(kf2),
+  (win)-[:SUPPORTS]->(kf2),
+  (kf2)-[:ISRATED{comment:'cool'}]->(oc10),
+  
+  (valve)-[:DEVELOPED]->(l4d2),
+  (valve)-[:PUBLISHED]->(l4d2),
+  (horror)-[:DESCRIBES]->(l4d2),
+  (lin)-[:SUPPORTS]->(l4d2),
+  (win)-[:SUPPORTS]->(l4d2),
+  (l4d2)-[:ISRATED{comment:'cool'}]->(oc8),
+  
+  (bioware)-[:DEVELOPED]->(mass1),
+  (microsoft)-[:PUBLISHED]->(mass1),  
+  (action)-[:DESCRIBES]->(mass1),
+  (rpg)-[:DESCRIBES]->(mass1),
+  (xbox360)-[:SUPPORTS]->(mass1),
+  (win)-[:SUPPORTS]->(mass1),
+  (mass1)-[:ISRATED{comment:'cool'}]->(oc7),
+  
+  (mojang)-[:DEVELOPED]->(mine),
+  (mojang)-[:PUBLISHED]->(mine),
+  (adven)-[:DESCRIBES]->(mine),
+  (survival)-[:DESCRIBES]->(mine),
+  (xbox360)-[:SUPPORTS]->(mine),
+  (win)-[:SUPPORTS]->(mine),
+  (psvita)-[:SUPPORTS]->(mine),
+  (nsw)-[:SUPPORTS]->(mine),
+  (mine)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (nether)-[:DEVELOPED]->(mkx),
+  (wb)-[:PUBLISHED]->(mkx),  
+  (action)-[:DESCRIBES]->(mkx),
+  (xbox1)-[:SUPPORTS]->(mkx),
+  (ps4)-[:SUPPORTS]->(mkx),
+  (mkx)-[:ISRATED{comment:'cool'}]->(oc8),
+  
+  (ea)-[:DEVELOPED]->(nfsu),
+  (ea)-[:PUBLISHED]->(nfsu),
+  (race)-[:DESCRIBES]->(nfsu),
+  (xbox)-[:SUPPORTS]->(nfsu),
+  (ps2)-[:SUPPORTS]->(nfsu),
+  (nfsu)-[:ISRATED{comment:'cool'}]->(oc10),
+  
+  (ghost)-[:DEVELOPED]->(nfs15),
+  (ea)-[:PUBLISHED]->(nfs15),
+  (race)-[:DESCRIBES]->(nfs15),
+  (mp)-[:DESCRIBES]->(nfs15),
+  (ps4)-[:SUPPORTS]->(nfs15),
+  (win)-[:SUPPORTS]->(nfs15),
+  (nfs15)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (blizz)-[:DEVELOPED]->(ow),
+  (blizz)-[:PUBLISHED]->(ow),  
+  (scifi)-[:DESCRIBES]->(ow),
+  (mp)-[:DESCRIBES]->(ow),
+  (xbox1)-[:SUPPORTS]->(ow),
+  (win)-[:SUPPORTS]->(ow),
+  (ow)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (ovk)-[:DEVELOPED]->(pd1),
+  (sony)-[:PUBLISHED]->(pd1),
+  (fps)-[:DESCRIBES]->(pd1),
+  (ps3)-[:SUPPORTS]->(pd1),
+  (win)-[:SUPPORTS]->(pd1),
+  (pd1)-[:ISRATED{comment:'cool'}]->(oc8),
+  
+  (ovk)-[:DEVELOPED]->(pd2),
+  (five)-[:PUBLISHED]->(pd2),  
+  (coop)-[:DESCRIBES]->(pd2),
+  (fps)-[:DESCRIBES]->(pd2),
+  (nsw)-[:SUPPORTS]->(pd2),
+  (win)-[:SUPPORTS]->(pd2),
+  (pd2)-[:ISRATED{comment:'cool'}]->(oc10),
+  
+  (valve)-[:DEVELOPED]->(port1),
+  (valve)-[:PUBLISHED]->(port1),
+  (adven)-[:DESCRIBES]->(port1),
+  (mac)-[:SUPPORTS]->(port1),
+  (win)-[:SUPPORTS]->(port1),
+  (port1)-[:ISRATED{comment:'cool'}]->(oc10),
+  
+  (ids)-[:DEVELOPED]->(q2),
+  (activision)-[:PUBLISHED]->(q2),  
+  (action)-[:DESCRIBES]->(q2),
+  (fps)-[:DESCRIBES]->(q2),
+  (lin)-[:SUPPORTS]->(q2),
+  (win)-[:SUPPORTS]->(q2),
+  (q2)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (bhg)-[:DEVELOPED]->(ron),
+  (microsoft)-[:PUBLISHED]->(ron),
+  (strat)-[:DESCRIBES]->(ron),
+  (win)-[:SUPPORTS]->(ron),
+  (ron)-[:ISRATED{comment:'cool'}]->(oc10),
+  
+  (tca)-[:DEVELOPED]->(rtw),
+  (activision)-[:PUBLISHED]->(rtw), 
+  (strat)-[:DESCRIBES]->(rtw),
+  (classic)-[:DESCRIBES]->(rtw),
+  (mac)-[:SUPPORTS]->(rtw),
+  (win)-[:SUPPORTS]->(rtw),
+  (rtw)-[:ISRATED{comment:'cool'}]->(oc8),
+  
+  (croteam)-[:DEVELOPED]->(ss1),
+  (god)-[:PUBLISHED]->(ss1),
+  (classic)-[:DESCRIBES]->(ss1),
+  (lin)-[:SUPPORTS]->(ss1),
+  (xbox)-[:SUPPORTS]->(ss1),
+  (ss1)-[:ISRATED{comment:'cool'}]->(oc6),
+  
+  (croteam)-[:DEVELOPED]->(ss2),
+  (god)-[:PUBLISHED]->(ss2),
+  (action)-[:DESCRIBES]->(ss2),
+  (classic)-[:DESCRIBES]->(ss2),
+  (lin)-[:SUPPORTS]->(ss2),
+  (win)-[:SUPPORTS]->(ss2),
+  (ss2)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (bethesda)-[:DEVELOPED]->(tesv),
+  (bethesda)-[:PUBLISHED]->(tesv),
+  (rpg)-[:DESCRIBES]->(tesv),
+  (nsw)-[:SUPPORTS]->(tesv),
+  (win)-[:SUPPORTS]->(tesv),
+  (tesv)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (cored)-[:DEVELOPED]->(tr1),
+  (eidos)-[:PUBLISHED]->(tr1), 
+  (action)-[:DESCRIBES]->(tr1),
+  (adven)-[:DESCRIBES]->(tr1),
+  (win)-[:SUPPORTS]->(tr1),
+  (tr1)-[:ISRATED{comment:'cool'}]->(oc7),
+  
+  (ids)-[:DEVELOPED]->(wolf3d),
+  (apoge)-[:PUBLISHED]->(wolf3d),
+  (classic)-[:DESCRIBES]->(wolf3d),
+  (win)-[:SUPPORTS]->(wolf3d),
+  (wolf3d)-[:ISRATED{comment:'cool'}]->(oc7),
+  
+  (blizz)-[:DEVELOPED]->(wc3),
+  (blizz)-[:PUBLISHED]->(wc3),  
+  (fantasy)-[:DESCRIBES]->(wc3),
+  (strat)-[:DESCRIBES]->(wc3),
+  (mac)-[:SUPPORTS]->(wc3),
+  (win)-[:SUPPORTS]->(wc3),
+  (wc3)-[:ISRATED{comment:'cool'}]->(oc9),
+  
+  (cdpr)-[:DEVELOPED]->(witch1),
+  (atari)-[:PUBLISHED]->(witch1),
+  (sp)-[:DESCRIBES]->(witch1),
+  (rpg)-[:DESCRIBES]->(witch1),
+  (win)-[:SUPPORTS]->(witch1),
+  (witch1)-[:ISRATED{comment:'cool'}]->(oc10),
+	
+  (ace)-[:DEVELOPED]->(zc1),
+  (ace)-[:PUBLISHED]->(zc1),  
+  (action)-[:DESCRIBES]->(zc1),
+  (nsw)-[:SUPPORTS]->(zc1),
+  (win)-[:SUPPORTS]->(zc1),
+  (zc1)-[:ISRATED{comment:'cool'}]->(oc3)
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
